@@ -16,22 +16,30 @@
 
 在声明变量时，指针和引用的声明符 `*` , `&` 放置在数据类型和变量中间，两侧加空格。
 
+冒号 `:` 两侧需加空格。
+
 不应该用 `int` 来代替 `bool` 。
 
 应尽可能少使用全局变量。
 
+在不影响结果的情况下，自增和自减运算**必须**使用前置运算符 `++i` 而非 `i++` 。
+
 ### C++
 
-`#include` 放置于程序开头。
+`#include` 放置于程序开头， 与后面的文件名之间**必须**加一个空格。
 
-不应该使用 `using namespace std;`。
+在 `#include` 中，C 标准库文件必须使用 `c` 前缀 `<cstdio>` 而非 `.h` 后缀 `<stdio.h>`。
+
+尽可能不使用 `using namespace` ，尤其是**不能**在头文件中使用。
+
+**绝不应该**使用 `using namespace std;` 。
 
 能在编译时确定的常量尽可能用 `constexpr` 。
 
-`main` 返回类型 必须为 `int` ，尽量不省略`return 0;`。
+`main` 返回类型 必须为 `int` ，**不能**省略`return 0;` 。
 
 ### SourcePawn
 
-始终使用最新语法，程序开头需加`#pragma newdecls required`
+**始终**使用最新语法，程序开头需加 `#pragma newdecls required` 。
 
-语句末**必须**加分号`;`，使用强制规则`#pragma semicolon 1`。
+语句末**必须**加分号`;`，使用强制规则 `#pragma semicolon 1` 。
